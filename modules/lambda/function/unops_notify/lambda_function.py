@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import os
 import boto3
-import json
 import base64
 import logging
 

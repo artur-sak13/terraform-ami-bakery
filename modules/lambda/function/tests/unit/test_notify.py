@@ -1,5 +1,3 @@
-import json
-
 import pytest
 
 from unops_notify import lambda_function
@@ -30,5 +28,8 @@ def cwlogs_event():
 def test_lambda_handler(cwlogs_event, mocker):
     ret = lambda_function.lambda_handler(cwlogs_event, None)
 
-    assert ret['statusCode'] == 200
-    assert ret['body'] == 'ok'
+    if not ret['statusCode'] == 200:
+        raise AssertionError()
+
+    if not ret['body'] == 'ok':
+        raise AssertionError()
