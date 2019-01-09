@@ -58,7 +58,7 @@ def notify_mattermost(message):
                 'color': '#759C3D',
                 'text': 'New AMI created in [{0}]({1})!'.format(message.get("region"), aws_url.format(message.get("region"))),
                 'title': message.get('detail-type'),
-                'title_link': 'https://gihub.com/artur-sak13/unops',
+                'title_link': 'https://github.com/artur-sak13/unops',
                 'fields': [
                     {
                         "short": True,
